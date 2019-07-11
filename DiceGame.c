@@ -5,6 +5,10 @@ int main(){
   srand((unsigned int)time(NULL));
   int one,two;
   int total;
+  char name[10];
+  printf("What is your name?\n");
+  scanf("%s",name);
+  printf("Hello, %s!\n",name);
   printf("Rolling the dice...\n");
   one=rand()%6+1;
   two=rand()%6+1;
@@ -12,7 +16,8 @@ int main(){
   printf("Die 2: %d\n",two);
   total=one+two;
   printf("Total value: %d\n",total);
-  if(total>7) printf("You won\n");
-  else printf("You lost\n");
+  if(total>7) printf("%s won\n",name);
+  else printf("%s lost\n",name);
   return 0;
 }
+
